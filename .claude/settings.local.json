@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(gh auth status)",
+      "Bash(gh auth *)",
+      "Bash(tee __TRACKED_VAR__/gh-login-out.txt)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git -c core.safecrlf=false commit -m \"Add portfolio site\")",
+      "Bash(gh repo *)",
+      "Bash(gh api *)"
+    ]
+  }
+}
