@@ -5,10 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Radosław Polasik — Game Developer</title>
 <meta name="description" content="Game developer with 6 years of professional experience. Unity/C#, Unreal/C++, GameMaker. Available for remote contract / B2B work.">
+<link rel="icon" type="image/png" href="img/logo.png">
 <style>
   :root{
-    --bg:#0e1116; --bg2:#151a22; --card:#1a2029; --line:#2a3342;
-    --text:#d7dde6; --muted:#8b96a5; --accent:#e0533d; --accent2:#5ba8c9;
+    --bg:#0f1208; --bg2:#161b0d; --card:#1b2210; --line:#36421c;
+    --text:#dde4d2; --muted:#98a487; --accent:#eaff03; --accent2:#a9c353;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -17,15 +18,16 @@
   a:hover{text-decoration:underline}
   .wrap{max-width:960px;margin:0 auto;padding:0 24px}
   /* nav */
-  nav{position:sticky;top:0;background:rgba(14,17,22,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:10}
-  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
-  nav .logo{font-weight:700;letter-spacing:.06em;color:var(--text)}
+  nav{position:sticky;top:0;background:rgba(15,18,8,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:10}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:68px}
+  nav .logo{display:flex;align-items:center;gap:14px;font-weight:700;letter-spacing:.08em;font-size:18px;color:var(--text)}
+  nav .logo img{width:48px;height:48px;border-radius:8px;display:block}
   nav .links a{color:var(--muted);margin-left:22px;font-size:14px}
   nav .links a:hover{color:var(--text);text-decoration:none}
   /* hero */
   header{padding:88px 0 64px;background:
-    radial-gradient(ellipse 60% 50% at 70% 10%,rgba(224,83,61,.10),transparent),
-    radial-gradient(ellipse 50% 40% at 20% 90%,rgba(91,168,201,.08),transparent)}
+    radial-gradient(ellipse 60% 50% at 70% 10%,rgba(234,255,3,.07),transparent),
+    radial-gradient(ellipse 50% 40% at 20% 90%,rgba(66,90,0,.22),transparent)}
   h1{font-size:44px;line-height:1.15;letter-spacing:.01em}
   .tagline{font-size:20px;color:var(--muted);margin:14px 0 6px}
   .avail{display:inline-block;margin-top:18px;padding:7px 14px;border:1px solid var(--accent);border-radius:20px;color:var(--accent);font-size:14px;font-weight:600}
@@ -50,8 +52,8 @@
   .card h3{font-size:17px;margin-bottom:2px}
   .card .meta{font-size:12.5px;color:var(--accent2);margin-bottom:8px}
   .card p{font-size:14px;color:var(--muted)}
-  .ph{background:repeating-linear-gradient(45deg,#1e2530,#1e2530 12px,#202836 12px,#202836 24px);display:flex;align-items:center;justify-content:center;color:#54607a;font-size:13px;letter-spacing:.05em}
-  .card .shot{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;background:#0b0e13}
+  .ph{background:repeating-linear-gradient(45deg,#242c13,#242c13 12px,#293216 12px,#293216 24px);display:flex;align-items:center;justify-content:center;color:#6f7a54;font-size:13px;letter-spacing:.05em}
+  .card .shot{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;background:#0c0f06}
   .card .play{font-size:13px;font-weight:600}
   /* skills */
   .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
@@ -66,14 +68,17 @@
   @media(max-width:760px){
     h1{font-size:32px}
     .feature{grid-template-columns:1fr}
-    nav .links a{margin-left:12px;font-size:13px}
+    nav .wrap{height:auto;flex-wrap:wrap;row-gap:2px;padding:8px 24px}
+    nav .logo{font-size:15px;gap:10px}
+    nav .logo img{width:36px;height:36px}
+    nav .links a{margin-left:0;margin-right:14px;font-size:13px}
   }
 </style>
 </head>
 <body>
 
 <nav><div class="wrap">
-  <span class="logo">RADOSŁAW POLASIK</span>
+  <span class="logo"><img src="img/logo.png" alt="Radium Polonium logo">RADOSŁAW POLASIK</span>
   <span class="links">
     <a href="#current">Current project</a>
     <a href="#work">Professional work</a>
