@@ -3,226 +3,197 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Radosław Polasik — Game Developer</title>
-<meta name="description" content="Game developer with 6 years of professional experience. Unity/C#, Unreal/C++, GameMaker. Available for remote contract / B2B work.">
-<link rel="icon" type="image/png" href="img/logo.png">
+<title>Radium Polonium</title>
+<!-- TODO: meta description for search results and link previews. Plain text, max ~155 chars. -->
+<meta name="description" content="[TODO: meta description]">
+<meta name="theme-color" content="#0f1208">
+<link rel="icon" type="image/png" href="/img/logo.png">
+<!-- Open Graph (link previews on X, Bluesky, Discord etc.) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Radium Polonium">
+<meta property="og:title" content="Radium Polonium">
+<!-- TODO: og:description, usually the same text as the meta description above. Max ~155 chars. -->
+<meta property="og:description" content="[TODO: og description]">
+<meta property="og:url" content="https://radiumpolonium.github.io/">
+<meta property="og:image" content="https://radiumpolonium.github.io/img/logo.png">
+<meta property="og:image:width" content="1182">
+<meta property="og:image:height" content="1182">
+<meta property="og:image:alt" content="Radium Polonium logo">
+<meta name="twitter:card" content="summary">
 <style>
+  /* Palette and type shared across the site. */
   :root{
     --bg:#0f1208; --bg2:#161b0d; --card:#1b2210; --line:#36421c;
     --text:#dde4d2; --muted:#98a487; --accent:#eaff03; --accent2:#a9c353;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--text);font:16px/1.65 "Segoe UI",system-ui,sans-serif}
+  html{scroll-behavior:smooth;background:var(--bg)}
+  body{background:var(--bg);color:var(--text);font:16px/1.65 "Segoe UI",system-ui,sans-serif;min-height:100vh}
   a{color:var(--accent2);text-decoration:none}
-  a:hover{text-decoration:underline}
-  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
-  /* nav */
-  nav{position:sticky;top:0;background:rgba(15,18,8,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:10}
-  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:68px}
-  nav .logo{display:flex;align-items:center;gap:14px;font-weight:700;letter-spacing:.08em;font-size:18px;color:var(--text)}
-  nav .logo img{width:48px;height:48px;border-radius:8px;display:block}
-  nav .links a{color:var(--muted);margin-left:22px;font-size:14px}
-  nav .links a:hover{color:var(--text);text-decoration:none}
+  a:hover,a:focus-visible{text-decoration:underline}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+  .wrap{max-width:960px;margin:0 auto;padding:0 16px}
+
+  /* header (mobile first) */
+  .top{border-bottom:1px solid var(--line)}
+  .top .wrap{display:flex;align-items:center;gap:12px;height:64px}
+  .brand{display:flex;align-items:center;gap:12px;color:var(--text);font-weight:700;letter-spacing:.08em;font-size:15px;text-transform:uppercase}
+  .brand:hover{text-decoration:none}
+  .brand img{width:40px;height:40px;border-radius:8px;display:block}
+
   /* hero */
-  header{padding:88px 0 64px;background:
-    radial-gradient(ellipse 60% 50% at 70% 10%,rgba(234,255,3,.07),transparent),
-    radial-gradient(ellipse 50% 40% at 20% 90%,rgba(66,90,0,.22),transparent)}
-  h1{font-size:44px;line-height:1.15;letter-spacing:.01em}
-  .tagline{font-size:20px;color:var(--muted);margin:14px 0 6px}
-  .avail{display:inline-block;margin-top:18px;padding:7px 14px;border:1px solid var(--accent);border-radius:20px;color:var(--accent);font-size:14px;font-weight:600}
-  .hero-links{margin-top:22px;font-size:15px}
-  .hero-links a{margin-right:18px}
+  .hero{padding:72px 0 64px;background:
+    radial-gradient(ellipse 70% 55% at 75% 0%,rgba(234,255,3,.06),transparent),
+    radial-gradient(ellipse 60% 45% at 15% 100%,rgba(66,90,0,.22),transparent)}
+  .hero .mark{width:112px;height:112px;border-radius:12px;display:block;margin-bottom:28px;border:1px solid var(--line)}
+  .hero h1{font-size:30px;line-height:1.2;letter-spacing:.01em;max-width:18em}
+
   /* sections */
-  section{padding:56px 0;border-top:1px solid var(--line)}
-  h2{font-size:26px;margin-bottom:8px}
-  .sub{color:var(--muted);margin-bottom:32px;max-width:640px}
-  /* current project */
-  .feature{background:linear-gradient(135deg,var(--bg2),var(--card));border:1px solid var(--line);border-radius:12px;padding:36px;display:grid;grid-template-columns:1fr 480px;gap:32px;align-items:center}
-  .feature .ph{height:200px}
-  .feature .teaser{width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--line)}
-  .badge{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
-  .feature h3{font-size:24px;margin-bottom:12px}
-  .feature p{color:var(--muted);margin-bottom:10px}
-  /* cards */
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+  section{padding:48px 0;border-top:1px solid var(--line)}
+  h2{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:24px}
+  .grid{display:grid;grid-template-columns:1fr;gap:16px}
   .card{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
-  .card .ph{height:auto;aspect-ratio:3/2}
-  .card .body{padding:18px 20px 20px;flex:1}
-  .card h3{font-size:17px;margin-bottom:2px}
-  .card .meta{font-size:12.5px;color:var(--accent2);margin-bottom:8px}
+  .card .body{padding:16px 18px 20px;flex:1}
+  .card h3{font-size:17px;line-height:1.3;margin-bottom:4px}
+  .card h3 a{color:var(--text)}
   .card p{font-size:14px;color:var(--muted)}
-  .ph{background:repeating-linear-gradient(45deg,#242c13,#242c13 12px,#293216 12px,#293216 24px);display:flex;align-items:center;justify-content:center;color:#6f7a54;font-size:13px;letter-spacing:.05em}
-  .card .shot{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;background:#0c0f06}
-  .card .play{font-size:13px;font-weight:600}
-  /* skills */
-  .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
-  .skill{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:22px}
-  .skill h3{font-size:15px;color:var(--accent);margin-bottom:8px;letter-spacing:.03em}
-  .skill p{font-size:14px;color:var(--muted)}
-  /* about + contact */
-  .about p{max-width:700px;margin-bottom:14px;color:var(--text)}
-  footer{padding:56px 0 72px;border-top:1px solid var(--line);text-align:center}
-  footer .mail{font-size:22px;font-weight:600}
-  footer .small{color:var(--muted);font-size:13px;margin-top:26px}
-  @media(max-width:760px){
-    h1{font-size:32px}
-    .feature{grid-template-columns:1fr}
-    nav .wrap{height:auto;flex-wrap:wrap;row-gap:2px;padding:8px 24px}
-    nav .logo{font-size:15px;gap:10px}
-    nav .logo img{width:36px;height:36px}
-    nav .links a{margin-left:0;margin-right:14px;font-size:13px}
+  .card .more{display:inline-block;margin-top:10px;font-size:13px;font-weight:600}
+  /* 16:9 image slot: empty until a still is dropped in */
+  .slot{display:block;width:100%;aspect-ratio:16/9;background:var(--bg2);border-bottom:1px solid var(--line)}
+  .slot img{display:block;width:100%;height:100%;object-fit:cover}
+
+  /* elsewhere */
+  .links{list-style:none;display:flex;flex-wrap:wrap;gap:10px 22px;font-size:16px}
+
+  footer{padding:40px 0 56px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;text-align:center}
+  footer p+p{margin-top:4px}
+
+  @media(min-width:600px){
+    .wrap{padding:0 24px}
+    .grid{grid-template-columns:repeat(2,1fr);gap:20px}
+  }
+  @media(min-width:900px){
+    .top .wrap{height:72px}
+    .brand{font-size:18px;gap:14px}
+    .brand img{width:48px;height:48px}
+    .hero{padding:104px 0 88px}
+    .hero .mark{width:140px;height:140px}
+    .hero h1{font-size:40px}
+    section{padding:64px 0}
   }
 </style>
 </head>
 <body>
 
-<nav><div class="wrap">
-  <span class="logo"><img src="img/logo.png" alt="Radium Polonium logo">RADOSŁAW POLASIK</span>
-  <span class="links">
-    <a href="#current">Current project</a>
-    <a href="#work">Professional work</a>
-    <a href="#personal">Personal games</a>
-    <a href="#contact">Contact</a>
-  </span>
-</div></nav>
-
-<header><div class="wrap">
-  <h1>Game developer who ships —<br>from prototype to store.</h1>
-  <p class="tagline">Unity / C# &nbsp;·&nbsp; Unreal Engine / C++ &nbsp;·&nbsp; GameMaker<br>
-  6 years of professional experience &nbsp;·&nbsp; Master of Architecture &nbsp;·&nbsp; Szczecin, Poland</p>
-  <span class="avail">Available for remote contract / B2B work</span>
-  <p class="hero-links">
-    <a href="mailto:radiumpoloniumgames@gmail.com">Email</a>
-    <a href="https://www.linkedin.com/in/radoslawpolasik/">LinkedIn</a>
-    <a href="https://github.com/RadiumPolonium">GitHub</a>
-    <a href="https://radium-polonium.itch.io/">itch.io</a>
-    <a href="cv/RadoslawPolasik_CV_2026.pdf" target="_blank" rel="noopener" download>CV (PDF)</a>
-  </p>
+<header class="top"><div class="wrap">
+  <a class="brand" href="/"><img src="/img/logo.png" alt="Radium Polonium logo">Radium Polonium</a>
 </div></header>
 
-<section id="current"><div class="wrap">
-  <h2>Current project</h2>
-  <p class="sub">What I'm building right now with a four-person indie team, under the Radium Polonium banner.</p>
-  <div class="feature">
-    <div>
-      <span class="badge">Unannounced · In production · Coming to Steam</span>
-      <h3>3D retro-style horror narrative game</h3>
-      <p>I'm the sole programmer on the team — all gameplay systems, tooling, and builds — and I also create most of the 3D models, textures, and sound, and design and set up the levels.</p>
-      <p>The game's world is adapted from my Master of Architecture thesis project: a real piece of urban design turned into a playable environment.</p>
-      <p>Production runs on an AI-assisted pipeline I built around Claude Code, Unity MCP, and Blender MCP, with a shared agent memory system synchronized across machines.</p>
-    </div>
-    <a href="img/cloverfield-teaser.png" target="_blank" rel="noopener"><img class="teaser" src="img/cloverfield-teaser.png" alt="In-game teaser: a candle-lit room in the game's PSX retro style"></a>
-  </div>
-</div></section>
+<main>
 
-<section id="work"><div class="wrap">
-  <h2>Professional work</h2>
-  <p class="sub">Six years at Game Factory (2019–2025), shipping commercial mobile and PC titles and an EU-funded research project.</p>
+<div class="hero"><div class="wrap">
+  <img class="mark" src="/img/logo.png" alt="">
+  <!-- TODO: one-line intro. Your existing line on X is the voice sample. Max ~90 chars. -->
+  <h1>[TODO: one-line intro]</h1>
+</div></div>
+
+<section id="games" aria-labelledby="games-h"><div class="wrap">
+  <!-- TODO: section heading for the released itch.io games. One or two words. -->
+  <h2 id="games-h">[TODO: games heading]</h2>
   <div class="grid">
-    <div class="card"><div class="body">
-      <h3>Live 4X strategy title</h3><div class="meta">Unity ECS · Co-development · Live game · 2025</div>
-      <p>Contract work for a major European strategy-games group: ported a live 4X title with a large active player base to the client's proprietary Unity ECS framework — debugging and stabilisation.</p>
-    </div></div>
-    <div class="card"><img class="shot" src="img/colorami.jpg" alt="Colorami — pixel-art forest scene with the two player characters"><div class="body">
-      <h3>Colorami</h3><div class="meta">GameMaker · Commercial, released · 2025</div>
-      <p>Feature development on a released GameMaker title.</p>
-    </div></div>
-    <div class="card"><div class="body">
-      <h3>Mobile brick-crusher port</h3><div class="meta">Unity · Mobile · Co-development · 2023–2025</div>
-      <p>Port of a live physics-based brick-crusher. Implemented gameplay, social, and economy features using MVVM architecture.</p>
-    </div></div>
-    <div class="card"><div class="body">
-      <h3>Mobile 4X prototype</h3><div class="meta">Unity · Mobile 4X · Prototype · 2022–2023</div>
-      <p>Prototype of a mobile 4X strategy game — prototyped core mechanics and optimised frontend–backend communication.</p>
-    </div></div>
-    <div class="card"><img class="shot" src="img/the-city.jpg" alt="The City — simulated traffic at a city intersection with cars, trucks and traffic lights"><div class="body">
-      <h3>The City: traffic &amp; pedestrians ECS system</h3><div class="meta">Unity ECS · EU-funded research · Unity Asset Store · 2021–2023</div>
-      <p>Simulation of vehicle and pedestrian behaviour in urban and rural areas for games and simulators. I designed and implemented the behaviour algorithms in experimental Unity ECS.</p>
-    </div></div>
-    <div class="card"><img class="shot" src="img/psych.jpg" alt="Psych! — deck selection and answer-picking screens"><div class="body">
-      <h3>Psych! Outwit Your Friends</h3><div class="meta">Unity · Mobile · Live ops · 2020–2021</div>
-      <p>Party trivia game. New features, plugin integrations, and fixes driven by live player feedback.</p>
-    </div></div>
-    <div class="card"><img class="shot" src="img/poker-world.jpg" alt="Poker World — Texas Hold'em table mid-hand"><div class="body">
-      <h3>Poker World</h3><div class="meta">Unity · Steam &amp; Facebook Gameroom port · 2020</div>
-      <p>Ported a live mobile poker game to two new platforms and added new features.</p>
-    </div></div>
-    <div class="card"><img class="shot" src="img/sweet-escapes.jpg" alt="Sweet Escapes — bakery decorating and Bake-Off event screens"><div class="body">
-      <h3>Sweet Escapes</h3><div class="meta">Unity · Mobile · Commercial · 2019–2020</div>
-      <p>Baking-themed collapse game. Social features and seasonal content.</p>
-    </div></div>
+
+    <article class="card">
+      <!-- drop a 16:9 still here (e.g. <img src="/img/..." alt="...">) -->
+      <a class="slot" href="https://radium-polonium.itch.io/howling-tower" aria-label="Howling Tower on itch.io"></a>
+      <div class="body">
+        <h3><a href="https://radium-polonium.itch.io/howling-tower">Howling Tower</a></h3>
+        <!-- TODO: one line about Howling Tower. Max ~80 chars. -->
+        <p>[TODO: one line]</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <!-- drop a 16:9 still here (e.g. <img src="/img/..." alt="...">) -->
+      <a class="slot" href="https://radium-polonium.itch.io/clog-the-void" aria-label="Clog the Void on itch.io"></a>
+      <div class="body">
+        <h3><a href="https://radium-polonium.itch.io/clog-the-void">Clog the Void</a></h3>
+        <!-- TODO: one line about Clog the Void. Max ~80 chars. -->
+        <p>[TODO: one line]</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <!-- drop a 16:9 still here (e.g. <img src="/img/..." alt="...">) -->
+      <a class="slot" href="https://radium-polonium.itch.io/mars-traveler" aria-label="Mars traveler on itch.io"></a>
+      <div class="body">
+        <h3><a href="https://radium-polonium.itch.io/mars-traveler">Mars traveler</a></h3>
+        <!-- TODO: one line about Mars traveler. Max ~80 chars. -->
+        <p>[TODO: one line]</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <!-- drop a 16:9 still here (e.g. <img src="/img/..." alt="...">) -->
+      <a class="slot" href="https://radium-polonium.itch.io/twin-planes" aria-label="Twin Planes on itch.io"></a>
+      <div class="body">
+        <h3><a href="https://radium-polonium.itch.io/twin-planes">Twin Planes</a></h3>
+        <!-- TODO: one line about Twin Planes. Max ~80 chars. -->
+        <p>[TODO: one line]</p>
+      </div>
+    </article>
+
   </div>
-  <p style="margin-top:26px;color:var(--muted);font-size:14.5px">Also at Game Factory: twice supervised internship teams across Unity and Unreal Engine tracks — including mentoring 3–4 student programmers — each team shipped a complete game in one month.</p>
 </div></section>
 
-<section id="personal"><div class="wrap">
-  <h2>Personal games &amp; jams</h2>
-  <p class="sub">Game jam entries and personal projects in Unity, Unreal Engine 5, and GameMaker — playable at <a href="https://radium-polonium.itch.io/">radium-polonium.itch.io</a>.</p>
+<section id="now" aria-labelledby="now-h"><div class="wrap">
+  <!-- TODO: section heading for current work in progress. One or two words. -->
+  <h2 id="now-h">[TODO: now heading]</h2>
   <div class="grid">
-    <div class="card"><a href="https://radium-polonium.itch.io/howling-tower"><img class="shot" src="img/howling-tower.png" alt="Howling Tower"></a><div class="body">
-      <h3>Howling Tower</h3><div class="meta">3D platformer · Unreal Engine 5 · PSX retro · 2024</div>
-      <p>Atmospheric grappling-gun adventure: physics-based swinging and climbing in a retro PSX style — solo project in UE5, own C++ grappling physics. <a class="play" href="https://radium-polonium.itch.io/howling-tower">Download on itch.io →</a> · <a class="play" href="https://github.com/RadiumPolonium/HowlingTower">Code on GitHub →</a></p>
-    </div></div>
-    <div class="card"><a href="https://github.com/RadiumPolonium/ProjectInvigilation-public"><img class="shot" src="img/invigilation.png" alt="Project Invigilation — giant spider robot striding over a crowded plaza"></a><div class="body">
-      <h3>Project Invigilation</h3><div class="meta">3D · Unity · solo project</div>
-      <p>Surveil a city as a giant spider robot — procedural spider-leg IK, simulated crowds, and conversation systems. <a class="play" href="https://github.com/RadiumPolonium/ProjectInvigilation-public">Read the code on GitHub →</a></p>
-    </div></div>
-    <div class="card"><a href="https://goodenoughdevs.itch.io/minijam127"><img class="shot" src="img/forest-kitty.png" alt="Forest Kitty"></a><div class="body">
-      <h3>Forest Kitty</h3><div class="meta">2D platformer · Mini Jam 127 · team entry · 2023</div>
-      <p>Short, challenging platformer made in a weekend with a five-person jam team. <a class="play" href="https://goodenoughdevs.itch.io/minijam127">Play in browser →</a></p>
-    </div></div>
-    <div class="card"><a href="https://goodenoughdevs.itch.io/navigate"><img class="shot" src="img/navigate.png" alt="Navigate"></a><div class="body">
-      <h3>Navigate</h3><div class="meta">Puzzle · Unity · Mini Jam 120 · team entry · 2022</div>
-      <p>Path-building puzzle: guide spirits to heaven or hell without letting them collide. <a class="play" href="https://goodenoughdevs.itch.io/navigate">Play in browser →</a></p>
-    </div></div>
-    <div class="card"><a href="https://radium-polonium.itch.io/twin-planes"><img class="shot" src="img/twin-planes.png" alt="Twin Planes"></a><div class="body">
-      <h3>Twin Planes</h3><div class="meta">2D endless runner · GMTK Game Jam · 2021</div>
-      <p>Physics endless runner: bounce a ball ever higher between two planes you control at once. <a class="play" href="https://radium-polonium.itch.io/twin-planes">Play in browser →</a></p>
-    </div></div>
-    <div class="card"><a href="https://radium-polonium.itch.io/clog-the-void"><img class="shot" src="img/clog-the-void.png" alt="Clog the Void"></a><div class="body">
-      <h3>Clog the Void</h3><div class="meta">2D physics platformer · Mini Jam 67 · 2020</div>
-      <p>Physics platformer made in 72 hours — momentum, precision, and no enemies (jam limitation). <a class="play" href="https://radium-polonium.itch.io/clog-the-void">Play in browser →</a></p>
-    </div></div>
-    <div class="card"><img class="shot" src="img/spiders.jpg" alt="Spiders"><div class="body">
-      <h3>Spiders</h3><div class="meta">2D survival · GameMaker · full game + design document</div>
-      <p>Spider survival game in GameMaker — AI behaviours and procedural challenge, built to a complete game design document. <a class="play" href="files/Spiders_GDD.pdf" target="_blank" rel="noopener">Design document (PDF) →</a></p>
-    </div></div>
+
+    <article class="card">
+      <!-- drop a 16:9 still here. Unannounced game: no title, no name anywhere on this card. -->
+      <div class="slot"></div>
+      <div class="body">
+        <!-- TODO: vibe line for the unannounced horror game. No name, no story. Max ~90 chars. -->
+        <p>[TODO: vibe line, no name, no story]</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <!-- drop a 16:9 still here (grappling hook package) -->
+      <div class="slot"></div>
+      <div class="body">
+        <!-- TODO: package name as it will appear on the store. -->
+        <h3>[TODO: package name]</h3>
+        <!-- TODO: one line about the grappling hook Asset Store package. Max ~80 chars. -->
+        <p>[TODO: one line]</p>
+        <!-- TODO: store or itch link. Replace href="#" with the Asset Store / itch URL once it exists, and write the link text. Until then this link goes nowhere. -->
+        <a class="more" href="#">[TODO: link text]</a>
+      </div>
+    </article>
+
   </div>
 </div></section>
 
-<section id="skills"><div class="wrap">
-  <h2>How I work</h2>
-  <p class="sub">A generalist profile built for small teams and contract work.</p>
-  <div class="cols">
-    <div class="skill"><h3>ENGINEERING</h3>
-      <p>Unity (incl. experimental ECS/DOTS), C#; Unreal Engine 5, C++ &amp; Blueprints; GameMaker. Mechanics prototyping, physics and movement controllers, shaders, pathfinding and collision avoidance, MVVM, design patterns.</p></div>
-    <div class="skill"><h3>AI-ASSISTED PIPELINE</h3>
-      <p>Daily production use of Claude and Claude Code with Unity MCP and Blender MCP. Built a cross-machine shared memory system for project agents — a small team working at a bigger team's pace.</p></div>
-    <div class="skill"><h3>SPATIAL DESIGN</h3>
-      <p>Master of Architecture (Architecture &amp; Urban Planning). Real-world spatial and urban design knowledge applied to level design, world building, and simulation — rare among game programmers.</p></div>
-    <div class="skill"><h3>CONTENT &amp; SHIPPING</h3>
-      <p>3D modelling and texturing in Blender, sound, level setup. Live ops, platform porting (Steam, Facebook Gameroom), mentoring junior developers.</p></div>
-  </div>
+<section id="elsewhere" aria-labelledby="elsewhere-h"><div class="wrap">
+  <!-- TODO: section heading for the social links (working name: Elsewhere). One or two words. -->
+  <h2 id="elsewhere-h">[TODO: elsewhere heading]</h2>
+  <ul class="links">
+    <li><a href="https://x.com/Radium_Polonium" rel="me">X</a></li>
+    <li><a href="https://bsky.app/profile/radium-polonium.bsky.social" rel="me">Bluesky</a></li>
+    <li><a href="https://www.instagram.com/radium_polonium_games/" rel="me">Instagram</a></li>
+    <li><a href="https://radium-polonium.itch.io/" rel="me">itch.io</a></li>
+    <!-- TODO: channel URL -->
+    <li><a href="#">YouTube</a></li>
+    <li><a href="https://github.com/RadiumPolonium" rel="me">GitHub</a></li>
+  </ul>
 </div></section>
 
-<section id="about"><div class="wrap about">
-  <h2>About</h2>
-  <p style="margin-top:20px">I spent six years at Game Factory shipping commercial mobile and PC titles — from live ops on games with active player bases, through platform ports, to an EU-funded traffic simulation research project released on the Unity Asset Store.</p>
-  <p>In 2025 I left to build a commercial title full-time with a four-person indie team, under my Radium Polonium banner. I own all of the programming and much of the art, audio, and level design.</p>
-  <p>Before games, I earned a Master of Architecture — and I still use it: the world of our current game is my thesis project, rebuilt as a playable environment.</p>
-</div></section>
+</main>
 
-<footer id="contact"><div class="wrap">
-  <h2>Let's work together</h2>
-  <p class="sub" style="margin:10px auto 22px">Open to remote contract and B2B engagements — Unity, Unreal, GameMaker, or simulation work.</p>
-  <p class="mail"><a href="mailto:radiumpoloniumgames@gmail.com">radiumpoloniumgames@gmail.com</a></p>
-  <p class="hero-links" style="margin-top:18px">
-    <a href="https://www.linkedin.com/in/radoslawpolasik/">LinkedIn</a> &nbsp;
-    <a href="https://github.com/RadiumPolonium">GitHub</a> &nbsp;
-    <a href="https://radium-polonium.itch.io/">itch.io</a>
-  </p>
-  <p class="small">© 2026 Radosław Polasik · Szczecin, Poland</p>
+<footer><div class="wrap">
+  <p>Szczecin, Poland</p>
+  <p>&copy; 2026 Radium Polonium</p>
 </div></footer>
 
 </body>
