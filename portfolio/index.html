@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Radosław Polasik — Game Developer</title>
-<meta name="description" content="Game developer with 6 years of professional experience. Unity/C#, Unreal/C++, GameMaker. Available for remote contract / B2B work.">
+<meta name="description" content="Unity developer specialising in simulation and traffic AI, with 6+ years shipping commercial games. Available for remote contract / B2B work.">
 <link rel="icon" type="image/png" href="/img/logo.png">
 <style>
   :root{
@@ -40,6 +40,13 @@
   /* current project */
   .feature{background:linear-gradient(135deg,var(--bg2),var(--card));border:1px solid var(--line);border-radius:12px;padding:36px;display:grid;grid-template-columns:1fr 480px;gap:32px;align-items:center}
   .feature .ph{height:200px}
+  .now{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .now-card{background:linear-gradient(135deg,var(--bg2),var(--card));border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+  .now-card .media{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:#0c0f06;border-bottom:1px solid var(--line)}
+  .now-card .body{padding:22px 24px 24px;flex:1}
+  .now-card h3{font-size:20px;line-height:1.3;margin-bottom:10px}
+  .now-card p{font-size:14.5px;color:var(--muted);margin-bottom:10px}
+  .now-card p:last-child{margin-bottom:0}
   .feature .teaser{width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--line)}
   .badge{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
   .feature h3{font-size:24px;margin-bottom:12px}
@@ -68,6 +75,7 @@
   @media(max-width:760px){
     h1{font-size:32px}
     .feature{grid-template-columns:1fr}
+    .now{grid-template-columns:1fr}
     nav .wrap{height:auto;flex-wrap:wrap;row-gap:2px;padding:8px 24px}
     nav .logo{font-size:15px;gap:10px}
     nav .logo img{width:36px;height:36px}
@@ -80,7 +88,7 @@
 <nav><div class="wrap">
   <span class="logo"><img src="/img/logo.png" alt="Radium Polonium logo">RADOSŁAW POLASIK</span>
   <span class="links">
-    <a href="#current">Current project</a>
+    <a href="#current">Current work</a>
     <a href="#work">Professional work</a>
     <a href="#personal">Personal games</a>
     <a href="#contact">Contact</a>
@@ -88,9 +96,9 @@
 </div></nav>
 
 <header><div class="wrap">
-  <h1>Game developer who ships —<br>from prototype to store.</h1>
-  <p class="tagline">Unity / C# &nbsp;·&nbsp; Unreal Engine / C++ &nbsp;·&nbsp; GameMaker<br>
-  6 years of professional experience &nbsp;·&nbsp; Master of Architecture &nbsp;·&nbsp; Szczecin, Poland</p>
+  <h1>Unity developer for simulation —<br>and games that ship.</h1>
+  <p class="tagline">Traffic &amp; vehicle AI &nbsp;·&nbsp; Unity / C# &nbsp;·&nbsp; ECS/DOTS &nbsp;·&nbsp; Unreal Engine / C++<br>
+  6+ years of professional experience &nbsp;·&nbsp; Master of Architecture &nbsp;·&nbsp; Szczecin, Poland</p>
   <span class="avail">Available for remote contract / B2B work</span>
   <p class="hero-links">
     <a href="mailto:radiumpoloniumgames@gmail.com">Email</a>
@@ -102,24 +110,61 @@
 </div></header>
 
 <section id="current"><div class="wrap">
-  <h2>Current project</h2>
-  <p class="sub">What I'm building right now with a four-person indie team, under the Radium Polonium banner.</p>
-  <div class="feature">
-    <div>
-      <span class="badge">Unannounced · In production · Coming to Steam</span>
-      <h3>3D retro-style horror narrative game</h3>
-      <p>I'm the sole programmer on the team — all gameplay systems, tooling, and builds — and I also create most of the 3D models, textures, and sound, and design and set up the levels.</p>
-      <p>The game's world is adapted from my Master of Architecture thesis project: a real piece of urban design turned into a playable environment.</p>
-      <p>Production runs on an AI-assisted pipeline I built around Claude Code, Unity MCP, and Blender MCP, with a shared agent memory system synchronized across machines.</p>
-    </div>
-    <a href="/img/cloverfield-teaser.png" target="_blank" rel="noopener"><img class="teaser" src="/img/cloverfield-teaser.png" alt="In-game teaser: a candle-lit room in the game's PSX retro style"></a>
+  <h2>Current work</h2>
+  <p class="sub">What I'm working on right now: contract development for a PC game publisher, and my own game with a four-person indie team under the Radium Polonium banner.</p>
+  <div class="now">
+    <article class="now-card">
+      <!-- Abstract decoration only: no visuals from the contract project (NDA). -->
+      <svg class="media" viewBox="0 0 320 180" role="img" aria-label="Abstract road network diagram">
+        <g fill="none" stroke-linecap="round">
+          <path d="M-10 60 H120 Q160 60 160 100 V200" stroke="var(--line)" stroke-width="14"/>
+          <path d="M160 -10 V40 Q160 60 180 60 H330" stroke="var(--line)" stroke-width="14"/>
+          <path d="M160 100 Q160 130 200 130 H330" stroke="var(--line)" stroke-width="14"/>
+          <circle cx="245" cy="95" r="22" stroke="var(--line)" stroke-width="12"/>
+          <path d="M-10 60 H120 Q160 60 160 100 V200" stroke="var(--accent2)" stroke-width="1.5" stroke-dasharray="6 7" opacity=".55"/>
+          <path d="M160 -10 V40 Q160 60 180 60 H330" stroke="var(--accent2)" stroke-width="1.5" stroke-dasharray="6 7" opacity=".55"/>
+          <path d="M160 100 Q160 130 200 130 H330" stroke="var(--accent2)" stroke-width="1.5" stroke-dasharray="6 7" opacity=".55"/>
+        </g>
+        <g fill="var(--accent)">
+          <circle cx="160" cy="60" r="4.5"/><circle cx="160" cy="100" r="4.5"/><circle cx="245" cy="73" r="3.5"/><circle cx="267" cy="95" r="3.5"/>
+          <rect x="70" y="55" width="16" height="9" rx="2" opacity=".9"/><rect x="215" y="125" width="16" height="9" rx="2" opacity=".9"/><rect x="155" y="150" width="9" height="16" rx="2" opacity=".9"/>
+        </g>
+      </svg>
+      <div class="body">
+        <span class="badge">Contract · Under NDA · 2026–present</span>
+        <h3>Traffic &amp; vehicle AI for a PC publisher</h3>
+        <p>Sole developer on a Unity 6 (URP) project for a Polish PC game publisher. I own the whole codebase, from architecture to builds.</p>
+        <p>Built from scratch: traffic and vehicle AI, simulation systems, editor tooling, and headless automated tests that keep simulation behaviour measurable.</p>
+        <p>It follows on from my traffic simulation work on <a href="#work">The City</a>, released on the Unity Asset Store.</p>
+      </div>
+    </article>
+    <article class="now-card">
+      <a href="/img/cloverfield-teaser.png" target="_blank" rel="noopener"><img class="media" src="/img/cloverfield-teaser.png" alt="In-game teaser: a candle-lit room in the game's PSX retro style"></a>
+      <div class="body">
+        <span class="badge">Own game · Unannounced · Coming to Steam</span>
+        <h3>3D retro-style horror narrative</h3>
+        <p>Sole programmer in a four-person indie team: all gameplay systems, tooling and builds, plus most of the 3D models, textures, sound and level setup.</p>
+        <p>The game's world is adapted from my Master of Architecture thesis: a real piece of urban design turned into a playable environment.</p>
+        <p>Production runs on an AI-assisted pipeline I built around Claude Code, Unity MCP and Blender MCP.</p>
+      </div>
+    </article>
   </div>
 </div></section>
 
 <section id="work"><div class="wrap">
   <h2>Professional work</h2>
-  <p class="sub">Six years at Game Factory (2019–2025), shipping commercial mobile and PC titles and an EU-funded research project.</p>
+  <p class="sub">Six years at Game Factory (2019–2025) shipping commercial mobile and PC titles and an EU-funded research project, and contract work since 2026.</p>
   <div class="grid">
+    <!-- Current contract. Public facts only (NDA): contract Unity development for a game publisher, sole developer; vehicle/traffic AI, simulation systems, editor tooling, automated testing. No client name, no project name, no visuals. -->
+    <div class="card"><div class="body">
+      <h3>Traffic &amp; vehicle AI for a PC publisher</h3><div class="meta">Unity 6 · URP · Contract, under NDA · 2026–present</div>
+      <p>Sole developer on a Unity 6 project for a Polish PC game publisher. Building traffic and vehicle AI, simulation systems, editor tooling and automated tests from scratch.</p>
+    </div></div>
+    <div class="card"><img class="shot" src="/img/the-city.jpg" alt="The City — simulated traffic at a city intersection with cars, trucks and traffic lights"><div class="body">
+      <h3>The City: traffic &amp; pedestrians ECS system</h3><div class="meta">Unity ECS · EU-funded research · Unity Asset Store · 2021–2023</div>
+      <p>Simulation of vehicle and pedestrian behaviour in urban and rural areas for games and simulators. I designed and implemented the behaviour algorithms in experimental Unity ECS.
+        <a class="play" href="https://assetstore.unity.com/packages/templates/systems/the-city-traffic-and-pedestrians-ecs-system-246714" target="_blank" rel="noopener">View on the Unity Asset Store →</a></p>
+    </div></div>
     <div class="card"><div class="body">
       <h3>Live 4X strategy title</h3><div class="meta">Unity ECS · Co-development · Live game · 2025</div>
       <p>Contract work for a major European strategy-games group: ported a live 4X title with a large active player base to the client's proprietary Unity ECS framework — debugging and stabilisation.</p>
@@ -135,10 +180,6 @@
     <div class="card"><div class="body">
       <h3>Mobile 4X prototype</h3><div class="meta">Unity · Mobile 4X · Prototype · 2022–2023</div>
       <p>Prototype of a mobile 4X strategy game — prototyped core mechanics and optimised frontend–backend communication.</p>
-    </div></div>
-    <div class="card"><img class="shot" src="/img/the-city.jpg" alt="The City — simulated traffic at a city intersection with cars, trucks and traffic lights"><div class="body">
-      <h3>The City: traffic &amp; pedestrians ECS system</h3><div class="meta">Unity ECS · EU-funded research · Unity Asset Store · 2021–2023</div>
-      <p>Simulation of vehicle and pedestrian behaviour in urban and rural areas for games and simulators. I designed and implemented the behaviour algorithms in experimental Unity ECS.</p>
     </div></div>
     <div class="card"><img class="shot" src="/img/psych.jpg" alt="Psych! — deck selection and answer-picking screens"><div class="body">
       <h3>Psych! Outwit Your Friends</h3><div class="meta">Unity · Mobile · Live ops · 2020–2021</div>
@@ -195,8 +236,10 @@
   <h2>How I work</h2>
   <p class="sub">A generalist profile built for small teams and contract work.</p>
   <div class="cols">
+    <div class="skill"><h3>SIMULATION &amp; AI</h3>
+      <p>Traffic and vehicle AI, pedestrian and crowd simulation, large agent counts in Unity ECS/DOTS. Editor tooling and headless automated tests (NUnit) that keep simulation behaviour measurable and regression-free.</p></div>
     <div class="skill"><h3>ENGINEERING</h3>
-      <p>Unity (incl. experimental ECS/DOTS), C#; Unreal Engine 5, C++ &amp; Blueprints; GameMaker. Mechanics prototyping, physics and movement controllers, shaders, pathfinding and collision avoidance, MVVM, design patterns.</p></div>
+      <p>Unity 6 / URP (incl. ECS/DOTS), C#; Unreal Engine 5, C++ &amp; Blueprints; GameMaker. Mechanics prototyping, physics and movement controllers, shaders, pathfinding and collision avoidance, MVVM, design patterns.</p></div>
     <div class="skill"><h3>AI-ASSISTED PIPELINE</h3>
       <p>Daily production use of Claude and Claude Code with Unity MCP and Blender MCP. Built a cross-machine shared memory system for project agents — a small team working at a bigger team's pace.</p></div>
     <div class="skill"><h3>SPATIAL DESIGN</h3>
@@ -209,7 +252,8 @@
 <section id="about"><div class="wrap about">
   <h2>About</h2>
   <p style="margin-top:20px">I spent six years at Game Factory shipping commercial mobile and PC titles — from live ops on games with active player bases, through platform ports, to an EU-funded traffic simulation research project released on the Unity Asset Store.</p>
-  <p>In 2025 I left to build a commercial title full-time with a four-person indie team, under my Radium Polonium banner. I own all of the programming and much of the art, audio, and level design.</p>
+  <p>In 2025 I left to build a commercial title with a four-person indie team under my Radium Polonium banner, where I own all of the programming and much of the art, audio, and level design.</p>
+  <p>Since August 2026 I've also been working as a contract Unity developer for a Polish PC game publisher, building traffic and vehicle AI and simulation systems — the same field as The City.</p>
   <p>Before games, I earned a Master of Architecture — and I still use it: the world of our current game is my thesis project, rebuilt as a playable environment.</p>
 </div></section>
 
@@ -223,8 +267,7 @@
     <a href="https://radium-polonium.itch.io/">itch.io</a>
   </p>
   <p class="small">© 2026 Radosław Polasik · Szczecin, Poland</p>
-  <!-- TODO: link text for the Radium Polonium brand page (site root). Short, a few words. -->
-  <p class="small" style="margin-top:10px"><a href="/">[TODO: link text]</a></p>
+  <p class="small" style="margin-top:10px"><a href="/">Radium Polonium games →</a></p>
 </div></footer>
 
 </body>
